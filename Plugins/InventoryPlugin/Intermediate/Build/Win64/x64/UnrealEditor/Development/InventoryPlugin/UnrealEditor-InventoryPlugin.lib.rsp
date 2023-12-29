@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-InventoryPlugin.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Unreal Projects\EscapeRoom\Intermediate\Build\Win64\x64\EscapeRoomEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"D:\Unreal Projects\EscapeRoom\Plugins\InventoryPlugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\InventoryPlugin\Module.InventoryPlugin.cpp.obj"
+"D:\Unreal Projects\EscapeRoom\Plugins\InventoryPlugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\InventoryPlugin\Default.rc2.res"
+/OUT:"D:\Unreal Projects\EscapeRoom\Plugins\InventoryPlugin\Intermediate\Build\Win64\x64\UnrealEditor\Development\InventoryPlugin\UnrealEditor-InventoryPlugin.lib"

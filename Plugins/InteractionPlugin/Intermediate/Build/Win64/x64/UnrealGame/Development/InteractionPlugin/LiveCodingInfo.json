@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InteractionPlugin.cpp.obj": [
+			"InteractionPlugin.cpp.obj"
+		]
+	}
+}

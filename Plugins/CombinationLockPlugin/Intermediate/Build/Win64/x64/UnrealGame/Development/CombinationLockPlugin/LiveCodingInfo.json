@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.CombinationLockPlugin.cpp.obj": [
+			"CombinationLockPlugin.cpp.obj"
+		]
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unreal projects\\escaperoom\\plugins\\inventoryplugin\\intermediate\\build\\win64\\x64\\unrealgame\\development\\inventoryplugin\\module.inventoryplugin.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal projects\\escaperoom\\intermediate\\build\\win64\\x64\\escaperoom\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "d:\\unreal projects\\escaperoom\\plugins\\inventoryplugin\\intermediate\\build\\win64\\x64\\unrealgame\\development\\inventoryplugin\\definitions.inventoryplugin.h",
+            "d:\\unreal projects\\escaperoom\\plugins\\inventoryplugin\\source\\inventoryplugin\\private\\inventoryplugin.cpp",
+            "d:\\unreal projects\\escaperoom\\plugins\\inventoryplugin\\source\\inventoryplugin\\public\\inventoryplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

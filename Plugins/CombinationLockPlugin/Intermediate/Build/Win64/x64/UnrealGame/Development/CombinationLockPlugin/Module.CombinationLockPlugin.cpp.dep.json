@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unreal projects\\escaperoom\\plugins\\combinationlockplugin\\intermediate\\build\\win64\\x64\\unrealgame\\development\\combinationlockplugin\\module.combinationlockplugin.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal projects\\escaperoom\\intermediate\\build\\win64\\x64\\escaperoom\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "d:\\unreal projects\\escaperoom\\plugins\\combinationlockplugin\\intermediate\\build\\win64\\x64\\unrealgame\\development\\combinationlockplugin\\definitions.combinationlockplugin.h",
+            "d:\\unreal projects\\escaperoom\\plugins\\combinationlockplugin\\source\\combinationlockplugin\\private\\combinationlockplugin.cpp",
+            "d:\\unreal projects\\escaperoom\\plugins\\combinationlockplugin\\source\\combinationlockplugin\\public\\combinationlockplugin.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

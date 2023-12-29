@@ -1,0 +1,8 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.InventoryPlugin.cpp.obj": [
+			"InventoryPlugin.cpp.obj"
+		]
+	}
+}
