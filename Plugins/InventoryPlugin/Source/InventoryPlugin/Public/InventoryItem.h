@@ -30,13 +30,13 @@ struct FInventoryItem
 
 FORCEINLINE FInventoryItem::FInventoryItem(FName name, UTexture* thumbnail, FGameplayTag item_tag) : ItemName(name), ItemThumbnail(thumbnail), ItemTag(item_tag)
 {
-	if (GEngine){GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("dupa")); }
+	//if (GEngine){GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("dupa")); }
 	if (GEngine){GEngine->AddOnScreenDebugMessage(-1, 100.0f, FColor::Cyan, FString::Printf(TEXT("%s, func: %s"), *ItemTag.ToString(), *item_tag.ToString()));}
 }
 
 FORCEINLINE FInventoryItem::FInventoryItem()
 {
-	if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("dupa2")); }
+	//if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Cyan, TEXT("dupa2")); }
 }
 
 FORCEINLINE bool FInventoryItem::operator==(const FName otherName)
