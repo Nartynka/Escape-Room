@@ -29,7 +29,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	void AddItem(FInventoryItem Item);
-	void RemoveItem(FInventoryItem Item);
+
+	UFUNCTION(BlueprintCallable)
+	void RemoveItem(FGameplayTag ItemTag);
 
 	UFUNCTION(BlueprintCallable)
 	bool HasRequiredItem(FGameplayTag RequiredItemTag);

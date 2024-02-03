@@ -38,9 +38,16 @@ void UInventory::AddItem(FInventoryItem Item)
 	Items.Push(Item);
 }
 
-void UInventory::RemoveItem(FInventoryItem Item)
+void UInventory::RemoveItem(FGameplayTag ItemTag)
 {
-	Items.Remove(Item);
+	for (FInventoryItem Item : Items)
+	{
+		if (Item.ItemTag == ItemTag)
+		{
+			Items.Remove(Item);
+			break;
+		}
+	}
 }
 
 bool UInventory::HasRequiredItem(FGameplayTag RequiredItemTag)

@@ -19,6 +19,9 @@ Build/*
 
 Saved/*
 
+*BuiltData.uasset
+Content/Stylized_Egypt/Maps/*
+
 # Compiled source files for the engine to use
 */Intermediate/*
 Intermediate/*
