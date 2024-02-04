@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InventoryItem.h"
+#include "GameplayTagContainer.h"
 
 #include "BaseItem.generated.h"
 
@@ -23,8 +24,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	//FGameplayTag Tag;
 	UFUNCTION()
-	void OnInteraction();
+	void OnInteraction(FGameplayTag InteractionTag);
 
 	//TSubclassOf<ACharacter> PlayerClass;
 
@@ -33,15 +35,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(VisibleAnywhere)
 	USceneComponent* Root;
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* Mesh;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(VisibleAnywhere)
 	UInteractionSphere* InteractionSphere;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	FInventoryItem ItemType;
 };

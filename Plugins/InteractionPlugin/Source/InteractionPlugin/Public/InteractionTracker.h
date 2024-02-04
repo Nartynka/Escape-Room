@@ -34,10 +34,10 @@ public:
 	bool IsInteractionAvailable() const;
 
 	UFUNCTION(BlueprintCallable)
-	FGameplayTag CheckForTags() const;
+	FGameplayTagContainer CheckForTags() const;
 
 	UFUNCTION(BlueprintCallable)
-	void Interact();
+	void Interact(FGameplayTag InteractionTag);
 
 	UPROPERTY(EditAnywhere)
 	float Distance;

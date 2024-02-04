@@ -48,7 +48,7 @@ void ABaseItem::Tick(float DeltaTime)
 
 }
 
-void ABaseItem::OnInteraction()
+void ABaseItem::OnInteraction(FGameplayTag InteractionTag)
 {
 	// Pick up the item
 	//ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0);
@@ -57,7 +57,6 @@ void ABaseItem::OnInteraction()
 		//UInventory* InvComp = Player->GetComponentByClass<UInventory>();
 		if (UInventory* InvComp = Player->GetComponentByClass<UInventory>())
 		{
-			if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::Printf(TEXT("Picking up item: %s"), *ItemType.ItemName.ToString())); }
 			InvComp->AddItem(ItemType);
 			Destroy();
 		}

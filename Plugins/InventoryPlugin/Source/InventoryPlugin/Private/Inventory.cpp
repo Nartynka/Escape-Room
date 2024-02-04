@@ -34,7 +34,7 @@ void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompo
 
 void UInventory::AddItem(FInventoryItem Item)
 {
-	if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::Printf(TEXT("Adding item %s to inventory"), *Item.ItemName.ToString())); }
+	if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, FString::Printf(TEXT("Adding item %s to inventory"), *Item.ItemName.ToString())); }
 	Items.Push(Item);
 }
 
@@ -52,7 +52,7 @@ void UInventory::RemoveItem(FGameplayTag ItemTag)
 
 bool UInventory::HasRequiredItem(FGameplayTag RequiredItemTag)
 {
-	for (FInventoryItem item : Items)
+	for (const FInventoryItem &item : Items)
 	{
 		if (item.ItemTag == RequiredItemTag)
 		{

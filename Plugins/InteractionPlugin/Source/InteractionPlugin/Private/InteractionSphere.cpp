@@ -36,9 +36,9 @@ void UInteractionSphere::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 	// ...
 }
 
-void UInteractionSphere::Interact()
+void UInteractionSphere::Interact(FGameplayTag InteractionTag)
 {
-	OnInteractDelegate.Broadcast();
+	OnInteractDelegate.Broadcast(InteractionTag);
 }
 
 //void UInteractionSphere::OnInteraction_Implementation()
