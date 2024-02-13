@@ -10,8 +10,7 @@
 
 //@TODO: Implement Delegate OnInteract
 //DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractSignature, FGameplayTag, SearchedTag);
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteractSignature);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractSignature, FGameplayTag, InteractionTag);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteractSignature);
 
 UENUM(BlueprintType)
 enum class EInteraction
@@ -46,12 +45,10 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnInteractSignature OnInteractDelegate;
 
-	//UPROPERTY(EditAnywhere, meta = (DisplayName = "Required Tag (Optional)", ToolTip = "Optional Tag Required For Interaction"))
-	//FGameplayTag RequiredTag;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (DisplayName = "Required Tags (Optional)", ToolTip = "Optional Tags Required For Interaction"))
-	FGameplayTagContainer RequiredTags;
+	UPROPERTY(EditAnywhere, meta = (DisplayName = "Required Tag (Optional)", ToolTip = "Optional Tag Required For Interaction"))
+	FGameplayTag RequiredTag;
 
-	void Interact(FGameplayTag InteractionTag);
+	void Interact();
 
 	// @TODO: Pass Gameplay tag
 	//UFUNCTION(BlueprintNativeEvent, BlueprintCallable, meta = (AllowPrivateAcces = true))

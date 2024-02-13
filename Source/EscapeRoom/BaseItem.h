@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InventoryItem.h"
-#include "GameplayTagContainer.h"
 
 #include "BaseItem.generated.h"
 
@@ -26,7 +25,7 @@ protected:
 
 	//FGameplayTag Tag;
 	UFUNCTION()
-	void OnInteraction(FGameplayTag InteractionTag);
+	void OnInteraction();
 
 	//TSubclassOf<ACharacter> PlayerClass;
 
@@ -35,13 +34,13 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 	USceneComponent* Root;
 	
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 	UStaticMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditDefaultsOnly)
 	UInteractionSphere* InteractionSphere;
 
 	UPROPERTY(EditAnywhere)

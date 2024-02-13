@@ -48,7 +48,7 @@ void ABaseItem::Tick(float DeltaTime)
 
 }
 
-void ABaseItem::OnInteraction(FGameplayTag InteractionTag)
+void ABaseItem::OnInteraction()
 {
 	// Pick up the item
 	//ACharacter* Player = UGameplayStatics::GetPlayerCharacter(this, 0);

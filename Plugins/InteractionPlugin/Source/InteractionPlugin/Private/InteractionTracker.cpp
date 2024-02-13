@@ -65,32 +65,28 @@ void UInteractionTracker::TickComponent(float DeltaTime, ELevelTick TickType, FA
 			FoundInteractionSphere = nullptr;
 		}
 	}
-	else
-	{
-		FoundInteractionSphere = nullptr;
-	}
 }
 
-FGameplayTagContainer UInteractionTracker::CheckForTags() const
+FGameplayTag UInteractionTracker::CheckForTags() const
 {
 	// do i need IsInteractionAvailable func if i check for IS here anyway
 	if (FoundInteractionSphere)
 	{
-		return FoundInteractionSphere->RequiredTags;
+		return FoundInteractionSphere->RequiredTag;
 	}
 	else
 	{
-		FGameplayTagContainer EmptyTagContainer;
-		return EmptyTagContainer;
+		FGameplayTag a;
+		return a;
 		//return FGameplayTag::EmptyTag;
 	}
 }
 
-void UInteractionTracker::Interact(FGameplayTag InteractionTag)
+void UInteractionTracker::Interact()
 {
 	if (FoundInteractionSphere)
 	{
-		FoundInteractionSphere->Interact(InteractionTag);
+		FoundInteractionSphere->Interact();
 	}
 }
 
