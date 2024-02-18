@@ -34,7 +34,7 @@ public:
 	bool IsInteractionAvailable() const;
 
 	UFUNCTION(BlueprintCallable)
-	FGameplayTag CheckForTags() const;
+	FGameplayTag CheckForTagOnIS() const;
 
 	UFUNCTION(BlueprintCallable)
 	void Interact();

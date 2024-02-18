@@ -51,23 +51,43 @@ void UInteractionTracker::TickComponent(float DeltaTime, ELevelTick TickType, FA
 
 	if (HitResult.bBlockingHit)
 	{
-		check(HitResult.GetActor());
-		//PRINTSK(3, HitResult.GetActor()->GetActorLabel());
-		UInteractionSphere* FoundIS = HitResult.GetActor()->GetComponentByClass<UInteractionSphere>();
-		//UInteractionSphere* a = HitResult.GetActor()->GetComponentByClass(UInteractionSphere::StaticClass());
-		if (FoundIS)
+		check(HitResult.GetComponent());
+		if (UInteractionSphere* FoundIS = Cast<UInteractionSphere>(HitResult.GetComponent()))
 		{
+			PRINTS(FoundIS->GetName());
 			FoundInteractionSphere = FoundIS;
-			//PRINTSK(2, FoundIS->GetName());
 		}
 		else
 		{
 			FoundInteractionSphere = nullptr;
 		}
+		//PRINTSK(3, HitResult.GetActor()->GetActorLabel());
+		//UInteractionSphere* FoundIS = HitResult.GetActor()->GetComponentByClass<UInteractionSphere>();
+		//TArray<UInteractionSphere*> OutComponents;
+		//HitResult.GetActor()->GetComponents<UInteractionSphere>(OutComponents);
+		////UInteractionSphere* a = HitResult.GetActor()->GetComponentByClass(UInteractionSphere::StaticClass());
+		//
+		////for (UInteractionSphere* currIS : OutComponents)
+		////{
+		////}
+		//
+		//if (FoundIS)
+		//{
+		//	FoundInteractionSphere = FoundIS;
+		//	//PRINTSK(2, FoundIS->GetName());
+		//}
+		//else
+		//{
+		//	FoundInteractionSphere = nullptr;
+		//}
+	}
+	else
+	{
+		FoundInteractionSphere = nullptr;
 	}
 }
 
-FGameplayTag UInteractionTracker::CheckForTags() const
+FGameplayTag UInteractionTracker::CheckForTagOnIS() const
 {
 	// do i need IsInteractionAvailable func if i check for IS here anyway
 	if (FoundInteractionSphere)
