@@ -45,7 +45,7 @@ public:
 	UPROPERTY(BlueprintAssignable)
 	FOnInteractSignature OnInteractDelegate;
 
-	UPROPERTY(EditAnywhere, meta = (DisplayName = "Required Tag (Optional)", ToolTip = "Optional Tag Required For Interaction"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (DisplayName = "Required Tag (Optional)", ToolTip = "Optional Tag Required For Interaction"))
 	FGameplayTag RequiredTag;
 
 	void Interact();
